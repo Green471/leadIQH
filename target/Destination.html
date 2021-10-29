@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cucumber</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22ml-3%20ml-md-0%22%20viewBox%3D%220%200%2040.59%2046.31%22%20width%3D%2240.59%22%20height%3D%2246.31%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%2323d96c%22%20fill-rule%3D%22evenodd%22%20d%3D%22M30.283%203.645q-.528-.317-1.08-.593a16.164%2016.164%200%2000-1.154-.518c-.124-.052-.247-.1-.372-.149-.343-.127-.689-.268-1.042-.371a19.427%2019.427%200%2010-9.792%2037.51v5.56c11.676-1.753%2022.016-10.979%2022.787-23.093.459-7.289-3.193-14.73-9.347-18.346z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20d%3D%22M15.787%2046.307v-5.935A20.472%2020.472%200%201126.959%201.015c.274.08.557.187.832.291l.248.093c.165.064.291.113.417.167.348.137.739.313%201.208.543q.589.295%201.153.633c6.393%203.756%2010.354%2011.518%209.857%2019.316-.763%2012-10.722%2022.122-23.679%2024.067zm4.8-44.214h-.026a18.366%2018.366%200%2000-3.524%2036.408l.85.165v5.18c11.392-2.224%2020.009-11.272%2020.686-21.922.448-7.033-3.1-14.018-8.83-17.383l-.008-.005A14.691%2014.691%200%200027.654%203.5a5.74%205.74%200%2000-.344-.138l-.27-.1a9.49%209.49%200%2000-.708-.249%2018.425%2018.425%200%2000-5.743-.92z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20fill-rule%3D%22evenodd%22%20d%3D%22M16.666%2010.58a1.8%201.8%200%20011.583.608%204.184%204.184%200%2001.728%201.107c.645%201.422%201.027%203.461.23%204.605a6.334%206.334%200%2001-3.981-3.087%203.236%203.236%200%2001-.347-1.339%201.957%201.957%200%20011.787-1.894zm-5.683%208.025a7.742%207.742%200%20001.218.737%205.789%205.789%200%20004.883-.138%206.116%206.116%200%2000-3.345-3.45%203.664%203.664%200%2000-1.442-.321%201.884%201.884%200%2000-.319%200%201.766%201.766%200%2000-.995%203.172zm6.1%203.433c-.777-.518-2.379-.309-3.312-.292a4.416%204.416%200%2000-1.666.352%203.5%203.5%200%2000-1.218.738%201.817%201.817%200%20001.409%203.171%203.3%203.3%200%20001.442-.321c1.436-.62%203.141-2.32%203.346-3.648zm2.61%202a6.556%206.556%200%2000-3.724%203.506%203.091%203.091%200%2000-.321%201.314%201.907%201.907%200%20003.3%201.346%207.422%207.422%200%2000.7-1.218c.621-1.333.866-3.72.046-4.948zm2.557-7.167a5.941%205.941%200%20003.7-3.167%203.243%203.243%200%2000.319-1.346%201.915%201.915%200%2000-1.794-1.954%201.832%201.832%200%2000-1.6.641%207.382%207.382%200%2000-.705%201.218c-.62%201.434-.842%203.48.081%204.603zm4.208%2012.115a3.244%203.244%200%2000-.321-1.345%205.869%205.869%200%2000-3.554-3.269%205.386%205.386%200%2000-.226%204.711%204.147%204.147%200%2000.7%201.121c1.133%201.23%203.505.32%203.402-1.218zm4.2-6.28a7.466%207.466%200%2000-1.217-.7%204.425%204.425%200%2000-1.666-.352%206.4%206.4%200%2000-3.188.555%205.959%205.959%200%20003.316%203.386%203.672%203.672%200%20001.442.32%201.8%201.8%200%20001.31-3.209z%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E">
+	<style>
+.cucumber-react .cucumber-status--passed {
+  color: #2CB14A;
+}
+.cucumber-react .cucumber-status--skipped {
+  color: #00A0CC;
+}
+.cucumber-react .cucumber-status--pending {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--undefined {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--ambiguous {
+  color: #F4EBFD;
+}
+.cucumber-react .cucumber-status--failed {
+  color: #BB0000;
+}
+.cucumber-react .cucumber-status--unknown {
+  color: #B6BECB;
+}
+.cucumber-react h1, .cucumber-react h2, .cucumber-react h3 {
+  padding: 0;
+  margin: 0;
+}
+.cucumber-react a {
+  color: inherit;
+}
+.cucumber-react .gherkin-document-list {
+  font: 14px "Open Sans", sans-serif;
+  color: #161C24;
+  background: #fff;
+  overflow-x: hidden;
+}
+.cucumber-react .cucumber-title {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.cucumber-react .cucumber-title__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-title__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-tags {
+  padding: 0;
+  margin-bottom: 0;
+}
+.cucumber-react .cucumber-tags .cucumber-tag {
+  display: inline;
+  list-style-type: none;
+  padding: 4px 8px 4px 8px;
+  margin-right: 6px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+.cucumber-react .cucumber-feature__icon {
+  padding-top: 0.35em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-description,
+.cucumber-react .cucumber-children {
+  margin-left: 1em;
+}
+.cucumber-react .cucumber-feature,
+.cucumber-react .cucumber-rule,
+.cucumber-react .cucumber-scenario,
+.cucumber-react .cucumber-background {
+  margin-bottom: 1em;
+}
+.cucumber-react .cucumber-steps {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.cucumber-react .cucumber-steps .cucumber-step {
+  display: flex;
+}
+.cucumber-react .cucumber-steps .cucumber-step__status {
+  padding-top: 0.2em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-steps .cucumber-step__content {
+  flex-grow: 1;
+  max-width: calc(100% - 1.5em);
+}
+.cucumber-react .cucumber-steps .cucumber-step__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-steps .cucumber-step__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-steps .cucumber-step__param {
+  font-weight: normal;
+  font-style: italic;
+}
+.cucumber-react .cucumber-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .cucumber-table__header-cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .cucumber-table__cell__step {
+  flex-grow: 1;
+}
+.cucumber-react .cucumber-code {
+  padding: 0.25em;
+  background-color: #ebebeb;
+}
+.cucumber-react .cucumber-error {
+  padding: 0.5em;
+  margin: 0;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-no-documents {
+  font: 14px "Open Sans", sans-serif;
+}
+.cucumber-react .cucumber-attachment__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-attachment__image {
+  max-width: 100%;
+  margin-top: 1em;
+}
+.cucumber-react .cucumber-attachment__text {
+  background-color: #ebebeb;
+  padding: 0.5em;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-anchor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0.3em;
+}
+.cucumber-react .cucumber-anchor__link {
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  left: -20px;
+  display: flex;
+  align-items: center;
+}
+.cucumber-react .cucumber-anchor__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-anchor:hover a {
+  opacity: 1;
+  width: max-content;
+  transition: all 0.35s ease-in-out;
+}
+.cucumber-react .cucumber-anchor > * {
+  height: 100%;
+  margin-top: 0px;
+}
+
+.cucumber-report-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font: 11px "Open Sans", sans-serif;
+  margin-bottom: 1em;
+}
+.cucumber-report-header > * {
+  padding: 1em;
+}
+.cucumber-report-header .cucumber-status-filter {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-status-filter table {
+  width: 100%;
+}
+.cucumber-report-header .cucumber-execution-data {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-search-bar {
+  border-right: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search input {
+  padding: 0.4em;
+  border-radius: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search button {
+  height: 2.2em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar p.help {
+  font-size: 80%;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul {
+  display: inline;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li input {
+  display: inline-block;
+  width: auto;
+  height: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li label {
+  padding-right: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-execution-data {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: auto;
+  }
+}
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+    background-color: #f4f4f4;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.accordion__button:hover {
+    background-color: #ddd;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+}
+
+	</style>
+</head>
+<body>
+<div id="content">
+</div>
+<script>
+window.CUCUMBER_MESSAGES = [{"meta":{"protocolVersion":"15.0.0","implementation":{"name":"cucumber-jvm","version":"6.11.0"},"runtime":{"name":"Java HotSpot(TM) 64-Bit Server VM","version":"11.0.10+8-LTS-162"},"os":{"name":"Windows 10"},"cpu":{"name":"amd64"}}},{"testRunStarted":{"timestamp":{"seconds":"1635410971","nanos":53858400}}},{"source":{"uri":"file:///C:/Users/adily/IdeaProjects/leadIQHM/src/test/resources/features/demo.feature","data":"@endToEnd\r\nFeature: end to end workflow\r\n\r\n  Scenario Outline: Register new users\r\n    Given user is on the registration page\r\n    And user enters workemail \"\u003cworkemail\u003e\" and click on the privacy check box and click on the continue button\r\n    Then the user should be able to see \"\u003cInvitation message\u003e\" message\r\n    Then the user klicks on the invite link\r\n    Then user enters firstname and lastname as \"\u003cfirstname\u003e\" and \"\u003clastname\u003e\"\r\n    When user provides a password \"\u003cpassword\u003e\"\r\n    Then user klicks on roledescription box end selects the best description\r\n    Then user click mobilephone as \"\u003cmobilephone\u003e\"\r\n    And the user click on the continue button\r\n          #But if user enters invalid email sould be able to see \"\u003cinvalid email\u003e\"\r\n          #Then the user click on the login button\r\n            # When user provides a password \"\u003cpassword\u003e\"\r\n\r\n    Examples:\r\n      |workemail|Invitation message|firstname|lastname|password|mobilephone|\r\n      |automatisierungstester@googlemail.com|Invitation Sent|emilly|garcia|asdf3321|+1798-598-7855|\r\n\r\n  Scenario Outline: go to create a team workspace\r\n    Given user enters company name \"\u003ccompanyName\u003e\"\r\n    And user provides workspace name \"\u003cworkspaceName\u003e\"\r\n    Then user selects company size  from dropdown button\r\n    Then the user chooses the CRM tool they use\r\n    Then the user chooses the sales engagement they use\r\n    Then the user Specifies whether the user is using the LinkedIn sales navigator.\r\n    Then user click the Continue button\r\n    #Then user chooses where she or he wants to save his or her prospects\r\n    #And user klick on the next buttom\r\n    #And The user clicks the Install button to install the extension.\r\n\r\n    Examples:\r\n      |companyName|workspaceName|\r\n      |firstuser|QA Tester|\r\n    #------------------------------------------------------------------\r\n # Scenario Outline: create a new account\r\n  #  When user clicks on manageAccount\r\n   # Then user creates a new account\r\n    #Given user types a description \"\u003cdescription\u003e\"\r\n#    And user types the balance as \"\u003cbalance\u003e\"\r\n#    Then user selects an account type from dropdown \"\u003caccountType\u003e\"\r\n#    When user selects an accountStatusType \"\u003caccountStatusType\u003e\"\r\n#    Then user clicks on save button\r\n#    Examples: all data\r\n #     |description|balance|accountType|accountStatusType|\r\n#      |Instructor saving account|10000|CHECKING|ACTIVE  |\r\n#      |Instructor checking account|2000|SAVING|ACTIVE|\r\n  #    |utilisateur4 saving account|2000|SAVING|ACTIVE|\r\n\r\n # Scenario Outline: create a new customer\r\n #   And user navigates to my operations\r\n #   When user clicks on manageCustomer\r\n #   Then user creates a customer\r\n #   And user types the ssn as \"\u003cSSNsearch\u003e\"\r\n #   And user clicks on the searchbox\r\n #   When user types the firstname as \"\u003cfirstName\u003e\"\r\n #   Then user also types the lastname as \"\u003clastName\u003e\"\r\n #   And user provides the middle initial as \"\u003cmidleInitial\u003e\"\r\n #   And user types the email id as \"\u003cemail\u003e\"\r\n #   Then user types the mobilePhoneNumber as \"\u003cmobilePhoneNumber\u003e\"\r\n #   When user types the actual phone number as \"\u003cphoneNumber\u003e\"\r\n #   And user types the zipCode as \"\u003czipCode\u003e\"\r\n #   Then user the address as \"\u003caddress\u003e\"\r\n #   And user types the city as \"\u003ccity\u003e\"\r\n #   And user types the same ssn as \"\u003cSSN\u003e\"\r\n #   When user selects a country as \"\u003ccountryName\u003e\"\r\n #   And user types the state name as \"\u003cstate\u003e\"\r\n #   When user selects an account from dropdown as \"\u003caccountDropdown\u003e\"\r\n #   Then user clicks on save button\r\n #   Examples: all data\r\n #     |SSNsearch|firstName|lastName|midleInitial|email|mobilePhoneNumber|phoneNumber|zipCode|address|city|SSN|countryName|state|accountDropdown|\r\n #     |569-86-9023|utilisateur4|prenom2|u|utilisateur4@gmail.com|798-898-8855|798-898-8855|22180|New ville|GreensBoro|569-86-9023|UNITED STATES|NC|utilisateur4 saving account|\r\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///C:/Users/adily/IdeaProjects/leadIQHM/src/test/resources/features/demo.feature","feature":{"location":{"line":2,"column":1},"tags":[{"location":{"line":1,"column":1},"name":"@endToEnd","id":"14ff862d-45fe-4b5b-8775-21a5435e5110"}],"language":"en","keyword":"Feature","name":"end to end workflow","children":[{"scenario":{"location":{"line":4,"column":3},"keyword":"Scenario Outline","name":"Register new users","steps":[{"location":{"line":5,"column":5},"keyword":"Given ","text":"user is on the registration page","id":"0baa6e27-f506-456d-8c2b-c571cd32e05e"},{"location":{"line":6,"column":5},"keyword":"And ","text":"user enters workemail \"\u003cworkemail\u003e\" and click on the privacy check box and click on the continue button","id":"363ac7da-d1ef-4706-85ef-8c218fe9eedb"},{"location":{"line":7,"column":5},"keyword":"Then ","text":"the user should be able to see \"\u003cInvitation message\u003e\" message","id":"10629134-aa6e-444a-8bcb-3b9200bfcdd1"},{"location":{"line":8,"column":5},"keyword":"Then ","text":"the user klicks on the invite link","id":"90a3b257-d5cf-4f0a-b22b-446d23ba8392"},{"location":{"line":9,"column":5},"keyword":"Then ","text":"user enters firstname and lastname as \"\u003cfirstname\u003e\" and \"\u003clastname\u003e\"","id":"4201043f-b1ff-4bec-93ce-123c67db6e6a"},{"location":{"line":10,"column":5},"keyword":"When ","text":"user provides a password \"\u003cpassword\u003e\"","id":"21104930-4af3-4842-bf6d-bc99e1424b6a"},{"location":{"line":11,"column":5},"keyword":"Then ","text":"user klicks on roledescription box end selects the best description","id":"2ddbcb4f-19cd-4a58-a121-27d30e082db6"},{"location":{"line":12,"column":5},"keyword":"Then ","text":"user click mobilephone as \"\u003cmobilephone\u003e\"","id":"bc9ba03d-2b80-42cb-a02c-6eabcbb999b5"},{"location":{"line":13,"column":5},"keyword":"And ","text":"the user click on the continue button","id":"3034149f-6eee-401c-933c-8972dde9567f"}],"examples":[{"location":{"line":18,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":19,"column":7},"cells":[{"location":{"line":19,"column":8},"value":"workemail"},{"location":{"line":19,"column":18},"value":"Invitation message"},{"location":{"line":19,"column":37},"value":"firstname"},{"location":{"line":19,"column":47},"value":"lastname"},{"location":{"line":19,"column":56},"value":"password"},{"location":{"line":19,"column":65},"value":"mobilephone"}],"id":"d3b80fe2-392a-4ca7-b618-d805b5b20d5e"},"tableBody":[{"location":{"line":20,"column":7},"cells":[{"location":{"line":20,"column":8},"value":"automatisierungstester@googlemail.com"},{"location":{"line":20,"column":46},"value":"Invitation Sent"},{"location":{"line":20,"column":62},"value":"emilly"},{"location":{"line":20,"column":69},"value":"garcia"},{"location":{"line":20,"column":76},"value":"asdf3321"},{"location":{"line":20,"column":85},"value":"+1798-598-7855"}],"id":"13180ee8-c758-46a7-8839-463dbcec2b27"}],"id":"de903c8a-4d30-4364-bdf4-2f700c9213e5"}],"id":"f972aa94-597d-4111-9f93-e631a9374211"}},{"scenario":{"location":{"line":22,"column":3},"keyword":"Scenario Outline","name":"go to create a team workspace","steps":[{"location":{"line":23,"column":5},"keyword":"Given ","text":"user enters company name \"\u003ccompanyName\u003e\"","id":"4cd86caf-31a8-43fe-90d2-6712dcfbaa62"},{"location":{"line":24,"column":5},"keyword":"And ","text":"user provides workspace name \"\u003cworkspaceName\u003e\"","id":"81ffd748-6b48-49b7-87c7-05b6f0f1aa7e"},{"location":{"line":25,"column":5},"keyword":"Then ","text":"user selects company size  from dropdown button","id":"fcf6f91a-3a03-4299-99c2-a402be826c45"},{"location":{"line":26,"column":5},"keyword":"Then ","text":"the user chooses the CRM tool they use","id":"2c8d3ab9-9f36-4321-b53b-91b10c5491f9"},{"location":{"line":27,"column":5},"keyword":"Then ","text":"the user chooses the sales engagement they use","id":"1768ce74-0592-49e8-8244-e7d3d18489e0"},{"location":{"line":28,"column":5},"keyword":"Then ","text":"the user Specifies whether the user is using the LinkedIn sales navigator.","id":"4921cff4-30e8-496f-aaee-02d8a8d8d1b7"},{"location":{"line":29,"column":5},"keyword":"Then ","text":"user click the Continue button","id":"b1d2700b-75b9-4d07-a3ce-a62b172cf43c"}],"examples":[{"location":{"line":34,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":35,"column":7},"cells":[{"location":{"line":35,"column":8},"value":"companyName"},{"location":{"line":35,"column":20},"value":"workspaceName"}],"id":"7343d7f0-9c77-43c7-a01b-82c4c51e38ee"},"tableBody":[{"location":{"line":36,"column":7},"cells":[{"location":{"line":36,"column":8},"value":"firstuser"},{"location":{"line":36,"column":18},"value":"QA Tester"}],"id":"73a728fb-30fb-4049-8caf-c14a808b9f59"}],"id":"39112dba-e7d4-4cf5-a756-bba9c70cfaec"}],"id":"b259f8b2-80e8-4b33-aa6b-026310b460d5"}}]},"comments":[{"location":{"line":14,"column":1},"text":"          #But if user enters invalid email sould be able to see \"\u003cinvalid email\u003e\""},{"location":{"line":15,"column":1},"text":"          #Then the user click on the login button"},{"location":{"line":16,"column":1},"text":"            # When user provides a password \"\u003cpassword\u003e\""},{"location":{"line":30,"column":1},"text":"    #Then user chooses where she or he wants to save his or her prospects"},{"location":{"line":31,"column":1},"text":"    #And user klick on the next buttom"},{"location":{"line":32,"column":1},"text":"    #And The user clicks the Install button to install the extension."},{"location":{"line":37,"column":1},"text":"    #------------------------------------------------------------------"},{"location":{"line":38,"column":1},"text":" # Scenario Outline: create a new account"},{"location":{"line":39,"column":1},"text":"  #  When user clicks on manageAccount"},{"location":{"line":40,"column":1},"text":"   # Then user creates a new account"},{"location":{"line":41,"column":1},"text":"    #Given user types a description \"\u003cdescription\u003e\""},{"location":{"line":42,"column":1},"text":"#    And user types the balance as \"\u003cbalance\u003e\""},{"location":{"line":43,"column":1},"text":"#    Then user selects an account type from dropdown \"\u003caccountType\u003e\""},{"location":{"line":44,"column":1},"text":"#    When user selects an accountStatusType \"\u003caccountStatusType\u003e\""},{"location":{"line":45,"column":1},"text":"#    Then user clicks on save button"},{"location":{"line":46,"column":1},"text":"#    Examples: all data"},{"location":{"line":47,"column":1},"text":" #     |description|balance|accountType|accountStatusType|"},{"location":{"line":48,"column":1},"text":"#      |Instructor saving account|10000|CHECKING|ACTIVE  |"},{"location":{"line":49,"column":1},"text":"#      |Instructor checking account|2000|SAVING|ACTIVE|"},{"location":{"line":50,"column":1},"text":"  #    |utilisateur4 saving account|2000|SAVING|ACTIVE|"},{"location":{"line":52,"column":1},"text":" # Scenario Outline: create a new customer"},{"location":{"line":53,"column":1},"text":" #   And user navigates to my operations"},{"location":{"line":54,"column":1},"text":" #   When user clicks on manageCustomer"},{"location":{"line":55,"column":1},"text":" #   Then user creates a customer"},{"location":{"line":56,"column":1},"text":" #   And user types the ssn as \"\u003cSSNsearch\u003e\""},{"location":{"line":57,"column":1},"text":" #   And user clicks on the searchbox"},{"location":{"line":58,"column":1},"text":" #   When user types the firstname as \"\u003cfirstName\u003e\""},{"location":{"line":59,"column":1},"text":" #   Then user also types the lastname as \"\u003clastName\u003e\""},{"location":{"line":60,"column":1},"text":" #   And user provides the middle initial as \"\u003cmidleInitial\u003e\""},{"location":{"line":61,"column":1},"text":" #   And user types the email id as \"\u003cemail\u003e\""},{"location":{"line":62,"column":1},"text":" #   Then user types the mobilePhoneNumber as \"\u003cmobilePhoneNumber\u003e\""},{"location":{"line":63,"column":1},"text":" #   When user types the actual phone number as \"\u003cphoneNumber\u003e\""},{"location":{"line":64,"column":1},"text":" #   And user types the zipCode as \"\u003czipCode\u003e\""},{"location":{"line":65,"column":1},"text":" #   Then user the address as \"\u003caddress\u003e\""},{"location":{"line":66,"column":1},"text":" #   And user types the city as \"\u003ccity\u003e\""},{"location":{"line":67,"column":1},"text":" #   And user types the same ssn as \"\u003cSSN\u003e\""},{"location":{"line":68,"column":1},"text":" #   When user selects a country as \"\u003ccountryName\u003e\""},{"location":{"line":69,"column":1},"text":" #   And user types the state name as \"\u003cstate\u003e\""},{"location":{"line":70,"column":1},"text":" #   When user selects an account from dropdown as \"\u003caccountDropdown\u003e\""},{"location":{"line":71,"column":1},"text":" #   Then user clicks on save button"},{"location":{"line":72,"column":1},"text":" #   Examples: all data"},{"location":{"line":73,"column":1},"text":" #     |SSNsearch|firstName|lastName|midleInitial|email|mobilePhoneNumber|phoneNumber|zipCode|address|city|SSN|countryName|state|accountDropdown|"},{"location":{"line":74,"column":1},"text":" #     |569-86-9023|utilisateur4|prenom2|u|utilisateur4@gmail.com|798-898-8855|798-898-8855|22180|New ville|GreensBoro|569-86-9023|UNITED STATES|NC|utilisateur4 saving account|"}]}},{"pickle":{"id":"ef0937af-490c-4572-95a0-6f4c535c0902","uri":"file:///C:/Users/adily/IdeaProjects/leadIQHM/src/test/resources/features/demo.feature","name":"Register new users","language":"en","steps":[{"text":"user is on the registration page","id":"ebf6ecef-2dc1-495e-b138-44bab0a545e1","astNodeIds":["0baa6e27-f506-456d-8c2b-c571cd32e05e","13180ee8-c758-46a7-8839-463dbcec2b27"]},{"text":"user enters workemail \"automatisierungstester@googlemail.com\" and click on the privacy check box and click on the continue button","id":"17660f7f-1afd-4924-a813-95d54086ae14","astNodeIds":["363ac7da-d1ef-4706-85ef-8c218fe9eedb","13180ee8-c758-46a7-8839-463dbcec2b27"]},{"text":"the user should be able to see \"Invitation Sent\" message","id":"247888e4-742f-4c2c-8c41-36f5ef56ffa9","astNodeIds":["10629134-aa6e-444a-8bcb-3b9200bfcdd1","13180ee8-c758-46a7-8839-463dbcec2b27"]},{"text":"the user klicks on the invite link","id":"d8dc86c3-6cba-4e35-9df4-17bc24b44c64","astNodeIds":["90a3b257-d5cf-4f0a-b22b-446d23ba8392","13180ee8-c758-46a7-8839-463dbcec2b27"]},{"text":"user enters firstname and lastname as \"emilly\" and \"garcia\"","id":"e8f9efc3-b38e-47ce-8188-24aae627d641","astNodeIds":["4201043f-b1ff-4bec-93ce-123c67db6e6a","13180ee8-c758-46a7-8839-463dbcec2b27"]},{"text":"user provides a password \"asdf3321\"","id":"0884115e-cc80-4ce8-9db0-ee34bdce7684","astNodeIds":["21104930-4af3-4842-bf6d-bc99e1424b6a","13180ee8-c758-46a7-8839-463dbcec2b27"]},{"text":"user klicks on roledescription box end selects the best description","id":"3d7063f2-037c-4e06-b3ab-5096ac829e1f","astNodeIds":["2ddbcb4f-19cd-4a58-a121-27d30e082db6","13180ee8-c758-46a7-8839-463dbcec2b27"]},{"text":"user click mobilephone as \"+1798-598-7855\"","id":"261c7c13-a9f4-4e93-aaf5-0f997e5cb9ff","astNodeIds":["bc9ba03d-2b80-42cb-a02c-6eabcbb999b5","13180ee8-c758-46a7-8839-463dbcec2b27"]},{"text":"the user click on the continue button","id":"c9d2f033-e756-4aee-ba0d-c58d70ad244f","astNodeIds":["3034149f-6eee-401c-933c-8972dde9567f","13180ee8-c758-46a7-8839-463dbcec2b27"]}],"tags":[{"name":"@endToEnd","astNodeId":"14ff862d-45fe-4b5b-8775-21a5435e5110"}],"astNodeIds":["f972aa94-597d-4111-9f93-e631a9374211","13180ee8-c758-46a7-8839-463dbcec2b27"]}},{"pickle":{"id":"23412101-6136-48e9-aae4-ce3c8683d83b","uri":"file:///C:/Users/adily/IdeaProjects/leadIQHM/src/test/resources/features/demo.feature","name":"go to create a team workspace","language":"en","steps":[{"text":"user enters company name \"firstuser\"","id":"cedfc401-68a0-4250-a75e-535cfec72b0e","astNodeIds":["4cd86caf-31a8-43fe-90d2-6712dcfbaa62","73a728fb-30fb-4049-8caf-c14a808b9f59"]},{"text":"user provides workspace name \"QA Tester\"","id":"8cd3eb80-5b29-4e8a-a65e-b76663f2c474","astNodeIds":["81ffd748-6b48-49b7-87c7-05b6f0f1aa7e","73a728fb-30fb-4049-8caf-c14a808b9f59"]},{"text":"user selects company size  from dropdown button","id":"05330568-fc7b-4c0d-bd2f-3b47aa55b383","astNodeIds":["fcf6f91a-3a03-4299-99c2-a402be826c45","73a728fb-30fb-4049-8caf-c14a808b9f59"]},{"text":"the user chooses the CRM tool they use","id":"a51f9a4b-ae2d-4997-8abf-d5c90bafb80a","astNodeIds":["2c8d3ab9-9f36-4321-b53b-91b10c5491f9","73a728fb-30fb-4049-8caf-c14a808b9f59"]},{"text":"the user chooses the sales engagement they use","id":"bd773c2d-aa9b-420a-bc4c-0d4a01f1f96b","astNodeIds":["1768ce74-0592-49e8-8244-e7d3d18489e0","73a728fb-30fb-4049-8caf-c14a808b9f59"]},{"text":"the user Specifies whether the user is using the LinkedIn sales navigator.","id":"d391c35c-d5ef-448c-8df2-e0bfceaf570d","astNodeIds":["4921cff4-30e8-496f-aaee-02d8a8d8d1b7","73a728fb-30fb-4049-8caf-c14a808b9f59"]},{"text":"user click the Continue button","id":"adf22cea-c0c0-4c98-8a31-2a74c6f2eedb","astNodeIds":["b1d2700b-75b9-4d07-a3ce-a62b172cf43c","73a728fb-30fb-4049-8caf-c14a808b9f59"]}],"tags":[{"name":"@endToEnd","astNodeId":"14ff862d-45fe-4b5b-8775-21a5435e5110"}],"astNodeIds":["b259f8b2-80e8-4b33-aa6b-026310b460d5","73a728fb-30fb-4049-8caf-c14a808b9f59"]}},{"testCase":{"id":"95c40f7c-5fca-42ad-8587-c9f5e11d75c8","pickleId":"ef0937af-490c-4572-95a0-6f4c535c0902","testSteps":[{"id":"b4e7eaae-d0a9-4425-9400-d85a664e36ae","pickleStepId":"ebf6ecef-2dc1-495e-b138-44bab0a545e1","stepDefinitionIds":["98fa7674-8ba7-48b7-ab0f-89313af9516e"],"stepMatchArgumentsLists":[{}]},{"id":"b3210a9d-5af0-4c64-acbe-0ba87ec11187","pickleStepId":"17660f7f-1afd-4924-a813-95d54086ae14","stepDefinitionIds":["3a3637e8-92d1-4271-a846-67af01e8f115"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":22,"value":"\"automatisierungstester@googlemail.com\"","children":[{"start":23,"value":"automatisierungstester@googlemail.com","children":[{}]},{"children":[{}]}]}}]}]},{"id":"519b569e-2782-4ecb-94ff-919ce3895560","pickleStepId":"247888e4-742f-4c2c-8c41-36f5ef56ffa9","stepDefinitionIds":["3186acc5-f59f-4329-8f3e-b09971f68325"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":31,"value":"\"Invitation Sent\"","children":[{"start":32,"value":"Invitation Sent","children":[{}]},{"children":[{}]}]}}]}]},{"id":"8123636e-2e07-4461-8e1b-f5158f09d77d","pickleStepId":"d8dc86c3-6cba-4e35-9df4-17bc24b44c64","stepDefinitionIds":["b1ee8b92-aaec-4749-b777-8e219112cfbd"],"stepMatchArgumentsLists":[{}]},{"id":"c7bad2c4-2d4b-4831-8b52-d5eb1a438c2c","pickleStepId":"e8f9efc3-b38e-47ce-8188-24aae627d641","stepDefinitionIds":["390a5541-edc0-4842-ab8b-aa130ad943cb"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":38,"value":"\"emilly\"","children":[{"start":39,"value":"emilly","children":[{}]},{"children":[{}]}]}},{"parameterTypeName":"string","group":{"start":51,"value":"\"garcia\"","children":[{"start":52,"value":"garcia","children":[{}]},{"children":[{}]}]}}]}]},{"id":"eef2cd57-c69d-4737-a882-5e06f250ee27","pickleStepId":"0884115e-cc80-4ce8-9db0-ee34bdce7684","stepDefinitionIds":["be0dfb76-a643-463a-9839-97b6421de3ae"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":25,"value":"\"asdf3321\"","children":[{"start":26,"value":"asdf3321","children":[{}]},{"children":[{}]}]}}]}]},{"id":"0cd99c41-10dd-47e2-b985-80e9b0fbef73","pickleStepId":"3d7063f2-037c-4e06-b3ab-5096ac829e1f","stepDefinitionIds":["c5fddbdb-e70d-446a-a136-cd58ee6796f9"],"stepMatchArgumentsLists":[{}]},{"id":"2842cce6-76a7-40f3-a631-96f69f241852","pickleStepId":"261c7c13-a9f4-4e93-aaf5-0f997e5cb9ff","stepDefinitionIds":["935f90c8-18c4-4eeb-8db8-b17882af6f0a"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":26,"value":"\"+1798-598-7855\"","children":[{"start":27,"value":"+1798-598-7855","children":[{}]},{"children":[{}]}]}}]}]},{"id":"df860033-9bb0-4eaa-97b9-279ffae5551c","pickleStepId":"c9d2f033-e756-4aee-ba0d-c58d70ad244f","stepDefinitionIds":["581e66cc-83f8-4171-89c8-2b6ce6f455bf"],"stepMatchArgumentsLists":[{}]}]}},{"testCaseStarted":{"timestamp":{"seconds":"1635410971","nanos":304856400},"testCaseId":"95c40f7c-5fca-42ad-8587-c9f5e11d75c8","id":"28612ea5-5200-4261-b2ad-1a760dc450ea"}},{"testStepStarted":{"timestamp":{"seconds":"1635410971","nanos":373852500},"testStepId":"b4e7eaae-d0a9-4425-9400-d85a664e36ae","testCaseStartedId":"28612ea5-5200-4261-b2ad-1a760dc450ea"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"10","nanos":49768000}},"timestamp":{"seconds":"1635410981","nanos":423620500},"testStepId":"b4e7eaae-d0a9-4425-9400-d85a664e36ae","testCaseStartedId":"28612ea5-5200-4261-b2ad-1a760dc450ea"}},{"testStepStarted":{"timestamp":{"seconds":"1635410981","nanos":445624100},"testStepId":"b3210a9d-5af0-4c64-acbe-0ba87ec11187","testCaseStartedId":"28612ea5-5200-4261-b2ad-1a760dc450ea"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":802000300}},"timestamp":{"seconds":"1635410982","nanos":247624400},"testStepId":"b3210a9d-5af0-4c64-acbe-0ba87ec11187","testCaseStartedId":"28612ea5-5200-4261-b2ad-1a760dc450ea"}},{"testStepStarted":{"timestamp":{"seconds":"1635410982","nanos":247624400},"testStepId":"519b569e-2782-4ecb-94ff-919ce3895560","testCaseStartedId":"28612ea5-5200-4261-b2ad-1a760dc450ea"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"1","nanos":255903100}},"timestamp":{"seconds":"1635410983","nanos":503527500},"testStepId":"519b569e-2782-4ecb-94ff-919ce3895560","testCaseStartedId":"28612ea5-5200-4261-b2ad-1a760dc450ea"}},{"testStepStarted":{"timestamp":{"seconds":"1635410983",
